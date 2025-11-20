@@ -9,9 +9,12 @@ import certifi
 # Fix SSL certificate verification
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# Set credentials
-os.environ['AMADEUS_API_KEY'] = 'oAurKoFmqH3i7vPzW9goK91i2NJLny9x'
-os.environ['AMADEUS_API_SECRET'] = 'Uxw8YXZCRfa4cWyz'
+# Credentials should be set in environment variables before running this script
+# Example: export AMADEUS_API_KEY='your_key'
+#          export AMADEUS_API_SECRET='your_secret'
+if not os.getenv('AMADEUS_API_KEY') or not os.getenv('AMADEUS_API_SECRET'):
+    print("❌ ERROR: Please set AMADEUS_API_KEY and AMADEUS_API_SECRET environment variables")
+    sys.exit(1)
 
 # Add parent directory to path
 sys.path.append('..')
