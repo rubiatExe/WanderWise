@@ -1,0 +1,69 @@
+{
+  "type": "record",
+  "name": "FlightData",
+  "namespace": "com.wanderwise.data",
+  "fields": [
+    {
+      "name": "route_id",
+      "type": "string",
+      "doc": "Unique identifier for the route (e.g., JFK-LHR)"
+    },
+    {
+      "name": "timestamp",
+      "type": "string",
+      "doc": "ISO 8601 timestamp of the scrape"
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "doc": "Source of the data (e.g., Cash_Scraper_v1, Amadeus_API)"
+    },
+    {
+      "name": "data_type",
+      "type": {
+        "type": "enum",
+        "name": "DataType",
+        "symbols": ["cash", "award"]
+      }
+    },
+    {
+      "name": "price_usd",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Cash price in USD (if applicable)"
+    },
+    {
+      "name": "points_required",
+      "type": ["null", "int"],
+      "default": null,
+      "doc": "Points required for award booking (if applicable)"
+    },
+    {
+      "name": "program",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Loyalty program name (e.g., Aeroplan)"
+    },
+    {
+      "name": "taxes_usd",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Taxes and fees for award booking"
+    },
+    {
+      "name": "airline",
+      "type": "string",
+      "doc": "Operating airline"
+    },
+    {
+      "name": "cabin_class",
+      "type": "string",
+      "doc": "Economy, Premium Economy, Business, First"
+    },
+    {
+      "name": "is_award",
+      "type": "boolean",
+      "default": false
+    }
+  ]
+}

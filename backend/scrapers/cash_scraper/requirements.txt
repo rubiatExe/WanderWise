@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+playwright
+google-cloud-pubsub
+pydantic
+amadeus==8.1.0

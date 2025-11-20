@@ -1,0 +1,10 @@
+name: search_api
+description: Main Search API for WanderWise.
+version: 1.0.0
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  shelf: ^1.4.0
+  http: ^1.1.0
+  postgres: ^3.0.0

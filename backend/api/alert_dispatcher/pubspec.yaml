@@ -1,0 +1,9 @@
+name: alert_dispatcher
+description: Cloud Function to dispatch push notifications from Pub/Sub alerts.
+version: 1.0.0
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  functions_framework: ^0.4.0
+  shelf: ^1.4.0
